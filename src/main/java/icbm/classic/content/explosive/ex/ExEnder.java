@@ -89,11 +89,11 @@ public class ExEnder extends Explosion
     @Override
     public void init()
     {
-        RecipeUtility.addRecipe(new ShapedOreRecipe(Explosives.ENDER.getItemStack(),
-                "SPS", "PTP", "SPS",
-                'P', Items.ender_eye,
-                'S', Blocks.end_stone,
-                'T', Explosives.ATTRACTIVE.getItemStack()), this.getUnlocalizedName(), ICBMClassic.INSTANCE.getConfig(), true);
+//        RecipeUtility.addRecipe(new ShapedOreRecipe(Explosives.ENDER.getItemStack(),
+//                "SPS", "PTP", "SPS",
+//                'P', Items.ender_eye,
+//                'S', Blocks.end_stone,
+//                'T', Explosives.ATTRACTIVE.getItemStack()), this.getUnlocalizedName(), ICBMClassic.INSTANCE.getConfig(), true);
     }
 
     @SuppressWarnings("deprecation")

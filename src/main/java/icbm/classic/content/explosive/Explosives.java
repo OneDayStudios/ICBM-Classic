@@ -26,7 +26,7 @@ public enum Explosives
     CONTAGIOUS(new ExChemical("contagious", 2)),
     SONIC(new ExSonic("sonic", 2)),
     BREACHING(new ExBreaching()),
-    REJUVENATION(new ExRejuvenation()),
+//    REJUVENATION(new ExRejuvenation()),
     THERMOBARIC(new ExNuclear("thermobaric", 2)),
     SMINE(new ExSMine("sMine", 2)),
 
@@ -35,7 +35,7 @@ public enum Explosives
     EXOTHERMIC(new ExExothermic()),
     ENDOTHERMIC(new ExEndothermic()),
     ANTI_GRAV(new ExAntiGravitational()),
-    ENDER(new ExEnder()),
+//    ENDER(new ExEnder()),
     HYPERSONIC(new ExSonic("hypersonic", 3)), //TODO find Missile model
 
     ANTIMATTER(new ExAntimatter()),

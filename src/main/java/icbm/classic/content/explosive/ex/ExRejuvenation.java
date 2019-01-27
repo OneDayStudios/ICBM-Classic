@@ -24,11 +24,11 @@ public class ExRejuvenation extends Explosion
     @Override
     public void init()
     {
-        RecipeUtility.addRecipe(new ShapedOreRecipe(Explosives.REJUVENATION.getItemStack(),
-                "ICI", "CDC", "ICI",
-                'D', Blocks.diamond_block,
-                'C', Items.clock,
-                'I', Blocks.iron_block), this.getUnlocalizedName(), ICBMClassic.INSTANCE.getConfig(), true);
+//        RecipeUtility.addRecipe(new ShapedOreRecipe(Explosives.REJUVENATION.getItemStack(),
+//                "ICI", "CDC", "ICI",
+//                'D', Blocks.diamond_block,
+//                'C', Items.clock,
+//                'I', Blocks.iron_block), this.getUnlocalizedName(), ICBMClassic.INSTANCE.getConfig(), true);
     }
 
     @Override

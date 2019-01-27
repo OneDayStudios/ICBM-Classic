@@ -17,3 +17,4 @@ output
 changelog.html
 .okhttpcache/
 .DS_Store
+/nbproject/private/
