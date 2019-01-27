@@ -47,7 +47,7 @@ public enum Explosives
     MISSILE_CLUSTER(new MissileCluster("cluster", 2)),
     MISSILE_CLUSTER_NUKE(new MissileNuclearCluster()),
 
-    NIGHTMARE(new ExNightmare());
+    //NIGHTMARE(new ExNightmare());
 
     public final Explosive handler;
 
