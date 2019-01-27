@@ -116,7 +116,7 @@ public class TileLauncherBaseClient extends TileLauncherBase implements ISimpleI
             {
                 GL11.glScalef(0.00625f, 0.00625f, 0.00625f);
             }
-            else if (e != Explosives.NIGHTMARE)
+            else //if (e != Explosives.NIGHTMARE)
             {
                 GL11.glScalef(0.05f, 0.05f, 0.05f);
             }
