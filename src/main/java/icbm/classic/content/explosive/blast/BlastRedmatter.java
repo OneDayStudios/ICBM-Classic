@@ -31,7 +31,7 @@ public class BlastRedmatter extends Blast
     //Config settings
     public static int MAX_BLOCKS_EDITS_PER_TICK = 100;
     public static int DEFAULT_BLOCK_EDITS_PER_TICK = 20;
-    public static int MAX_LIFESPAN = 60; // 1 minutes
+    public static int MAX_LIFESPAN = 60 * 20; // 1 minutes
     public static float CHANCE_FOR_FLYING_BLOCK = 0.8f;
     public static boolean DO_DESPAWN = true;
     public static boolean doAudio = true;
