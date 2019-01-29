@@ -65,6 +65,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import rpcore.RPCore;
 
 /**
  * Main class for ICBM core to run on. The core will need to be initialized by each ICBM module.

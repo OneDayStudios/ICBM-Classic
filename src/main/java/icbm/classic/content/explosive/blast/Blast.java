@@ -21,6 +21,8 @@ import resonant.api.explosion.ExplosionEvent.PreExplosionEvent;
 import resonant.api.explosion.IExplosion;
 
 import java.util.List;
+import rpcore.RPCore;
+import rpcore.module.dimension.ForgeDimension;
 
 public abstract class Blast extends Explosion implements IExplosion, IWorldPosition
 {
@@ -60,8 +62,8 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
     {
         PreExplosionEvent evt = new PreExplosionEvent(this.oldWorld(), this);
         MinecraftForge.EVENT_BUS.post(evt);
-
-        if (!evt.isCanceled())
+        ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
+        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
         {
             this.doPreExplode();
         }
@@ -75,7 +77,8 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         DoExplosionEvent evt = new DoExplosionEvent(this.oldWorld(), this);
         MinecraftForge.EVENT_BUS.post(evt);
 
-        if (!evt.isCanceled())
+        ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
+        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
         {
             this.doExplode();
             this.callCount++;
@@ -92,7 +95,8 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         PostExplosionEvent evt = new PostExplosionEvent(this.oldWorld(), this);
         MinecraftForge.EVENT_BUS.post(evt);
 
-        if (!evt.isCanceled())
+        ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
+        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
         {
             this.doPostExplode();
         }
@@ -131,7 +135,8 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         ExplosionConstructionEvent evt = new ExplosionConstructionEvent(this.oldWorld(), this);
         MinecraftForge.EVENT_BUS.post(evt);
 
-        if (!evt.isCanceled())
+        ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
+        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
         {
             if (this.proceduralInterval() > 0)
             {
