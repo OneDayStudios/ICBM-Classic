@@ -63,7 +63,7 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         PreExplosionEvent evt = new PreExplosionEvent(this.oldWorld(), this);
         MinecraftForge.EVENT_BUS.post(evt);
         ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
-        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
+        if (!evt.isCanceled() && (d == null || !RPCore.isProtected(d.getIdentifier()))) 
         {
             this.doPreExplode();
         }
@@ -78,7 +78,7 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         MinecraftForge.EVENT_BUS.post(evt);
 
         ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
-        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
+        if (!evt.isCanceled() && (d == null || !RPCore.isProtected(d.getIdentifier()))) 
         {
             this.doExplode();
             this.callCount++;
@@ -96,7 +96,7 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         MinecraftForge.EVENT_BUS.post(evt);
 
         ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
-        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
+        if (!evt.isCanceled() && (d == null || !RPCore.isProtected(d.getIdentifier()))) 
         {
             this.doPostExplode();
         }
@@ -136,7 +136,7 @@ public abstract class Blast extends Explosion implements IExplosion, IWorldPosit
         MinecraftForge.EVENT_BUS.post(evt);
 
         ForgeDimension d = RPCore.getDimensionRegistry().getForDimensionId(this.oldWorld().provider.dimensionId);
-        if (!evt.isCanceled() && (d == null || !d.isExplosionProtected())) 
+        if (!evt.isCanceled() && (d == null || !RPCore.isProtected(d.getIdentifier()))) 
         {
             if (this.proceduralInterval() > 0)
             {
